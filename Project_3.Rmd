@@ -106,6 +106,21 @@ program_data <- list(
     name = "Program 3",
     url = "https://www.baypath.edu/academics/graduate-programs/applied-data-science-ms/"
     selector = "li:nth-child(2)"
+),
+  list(
+    name = "Program 4",
+    url = "https://catalog.njit.edu/graduate/computing-sciences/computer-science/ms/index.html",
+    selector = "td:nth-child(2)"
+  ),
+  list(
+    name = "Program 5",
+    url = "https://www.clemson.edu/graduate/academics/ms-dsa/academics.html",
+    selector = "td:nth-child(4) , td:nth-child(3), tr:nth-child(2) td:nth-child(2)"
+  ),
+  list(
+    name = "Program 6",
+    url = "https://bulletin.iit.edu/graduate/colleges/computing/applied-mathematics/master-data-science/#programrequirementstext",
+    selector = "td:nth-child(2)"
   ),
   list(
     name = "Program 7",
