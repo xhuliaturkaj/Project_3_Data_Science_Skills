@@ -28,7 +28,7 @@ scrapped_data <- function(data, css_string, regex_string){
 }
 ```
 
-# Scrapping names of schools
+# Scrapping information of schools
 ```{r}
 url <- "https://fortune.com/education/information-technology/best-online-masters-in-data-science/"
 html <- read_html(url)
