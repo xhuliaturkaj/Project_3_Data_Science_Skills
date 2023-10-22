@@ -7,7 +7,16 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
+
+``
+
+
+#### Our project is guided by a pivotal question: ***"What are the most crucial data science skills?"*** To answer this question effectively, we have chosen a method that offers unique insights.
+
+
+
+#### We believe that examining the curricula of top online Master of Data Science programs at 23 universities is an ideal approach. These programs are meticulously designed to equip students with the skills and knowledge needed to excel in the field. By scrutinizing what these respected institutions prioritize, we gain a deep understanding of the skills that form the backbone of data science success.
+
 
 # library used
 
