@@ -1,0 +1,66 @@
+---
+title: 'Project 3: Best Skills for a Data Scientist'
+author: "Folorunsho Atanda, Xhulia Turkaj, Ron Balaban"
+date: "2023-10-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# library used
+
+```{r}
+library(rvest)
+library(tidyverse)
+```
+
+# functions used
+
+```{r}
+# function to scrap info from website used
+scrapped_data <- function(data, css_string, regex_string){
+  data %>% 
+    html_elements(css_string) %>% 
+    html_text() %>% 
+    str_extract(regex_string)
+}
+```
+
+# Scrapping names of schools
+```{r}
+url <- "https://fortune.com/education/information-technology/best-online-masters-in-data-science/"
+html <- read_html(url)
+
+school_names <- html %>% 
+  scrapped_data("fully-clickable , .card-row:nth-child(1) h2", "([a-zA-Z]+\ ?){1,}")
+
+school_location <- html %>% 
+  scrapped_data(".card-row:nth-child(1) .text-medium", ".*")
+
+acceptance_rate <- html %>% 
+  scrapped_data(".footer:nth-child(3) .col-xxs-6:nth-child(1) .value", ".*")
+
+gre_required <- html %>% 
+  scrapped_data(".col-xxs-6:nth-child(4) .value", ".*")
+
+cost_per_credit <- html %>% 
+  scrapped_data(".col-xxs-6:nth-child(3) .value", ".*")
+
+avg_work_experience_required <- html %>% 
+  scrapped_data(".footer:nth-child(3) .col-xxs-6:nth-child(2) .value", ".*") %>% 
+  str_replace_all("DNP", "Did not state")
+
+school_info <- tibble(
+  school_names, 
+  school_location, 
+  acceptance_rate, 
+  gre_required,
+  cost_per_credit,
+  avg_work_experience_required,
+  )
+
+school_info
+```
+
