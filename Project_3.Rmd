@@ -93,6 +93,21 @@ school_info
 # Here I created  a list called  program data where each element is a list containing URL and selector
 program_data <- list(
   list(
+    name = "Program 1",
+    url = "https://online.usc.edu/programs/master-of-science-in-applied-data-science/"
+    selector = "p:nth-child(2)"
+  ),
+  list(
+    name = "Program 2",
+    url = "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/data-science-certificate/"
+    selector = "p.u--margin-bottom-2:nth-child(2)"
+  ),
+  list(
+    name = "Program 3",
+    url = "https://www.baypath.edu/academics/graduate-programs/applied-data-science-ms/"
+    selector = "li:nth-child(2)"
+  ),
+  list(
     name = "Program 7",
     url = "https://osuonline.okstate.edu/programs/graduate/business-analytics-master-of-science.html",
     selector = ".intro-with-media__caption"
