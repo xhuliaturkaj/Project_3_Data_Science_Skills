@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-``
+```
 
 
 #### Our project is guided by a pivotal question: ***"What are the most crucial data science skills?"*** To answer this question effectively, we have chosen a method that offers unique insights.
@@ -91,20 +91,21 @@ school_info
 
 
 # Here I created  a list called  program data where each element is a list containing URL and selector
+```{r}
 program_data <- list(
   list(
     name = "Program 1",
-    url = "https://online.usc.edu/programs/master-of-science-in-applied-data-science/"
+    url = "https://online.usc.edu/programs/master-of-science-in-applied-data-science/",
     selector = "p:nth-child(2)"
   ),
   list(
     name = "Program 2",
-    url = "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/data-science-certificate/"
+    url = "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/data-science-certificate/",
     selector = "p.u--margin-bottom-2:nth-child(2)"
   ),
   list(
     name = "Program 3",
-    url = "https://www.baypath.edu/academics/graduate-programs/applied-data-science-ms/"
+    url = "https://www.baypath.edu/academics/graduate-programs/applied-data-science-ms/",
     selector = "li:nth-child(2)"
 ),
   list(
@@ -165,6 +166,7 @@ scrape_skills <- function(program_data_entry) {
 # Scrape skills for each program in program_data
 scraped_skills <- lapply(program_data, scrape_skills)
 print(scraped_skills)
+```
 
 
 
