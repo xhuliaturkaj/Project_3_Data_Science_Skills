@@ -74,6 +74,68 @@ school_info <- tibble(
   avg_work_experience_required,
   )
 
+
+
+
+
+
+
+
+
+
+
+
+
+#Scraping data on skills you gain by the program's no. 7-10 by creating a function that scrapes the text data from each url and given css selector 
+
+
+# Here I created  a list called  program data where each element is a list containing URL and selector
+program_data <- list(
+  list(
+    name = "Program 7",
+    url = "https://osuonline.okstate.edu/programs/graduate/business-analytics-master-of-science.html",
+    selector = ".intro-with-media__caption"
+  ),
+  list(
+    name = "Program 8",
+    url = "https://www.depts.ttu.edu/rawlsbusiness/graduate/ms/datascience/",
+    selector = ".curr-info"
+  ),
+  list(
+    name = "Program 9",
+    url = "https://dsa.missouri.edu/masters-program/",
+    selector = ".shortcode_pb"
+  ),
+  list(
+    name = "Program 10",
+    url = "https://www.msol.ucla.edu/data-science-engineering/",
+    selector = c(".order-lg-1", ".mb-0")
+  )
+)
+
+# Define a function to scrape skills from a program data entry
+
+
+
+
+
+  
+  
+  
+  
+scrape_skills <- function(program_data_entry) {
+  webpage <- read_html(program_data_entry$url)
+  skills <- webpage %>%
+    html_nodes(program_data_entry$selector) %>%
+    html_text(trim = TRUE)
+  return(skills)
+}
+
+# Scrape skills for each program in program_data
+scraped_skills <- lapply(program_data, scrape_skills)
+print(scraped_skills)
+
+
 school_info
 ```
 
