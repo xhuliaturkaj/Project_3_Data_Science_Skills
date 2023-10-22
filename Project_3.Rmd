@@ -76,7 +76,8 @@ school_info <- tibble(
 
 
 
-
+school_info
+```
 
 
 
@@ -136,6 +137,5 @@ scraped_skills <- lapply(program_data, scrape_skills)
 print(scraped_skills)
 
 
-school_info
-```
+
 
