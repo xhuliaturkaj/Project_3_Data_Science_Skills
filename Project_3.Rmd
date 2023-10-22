@@ -33,7 +33,7 @@ library(tidyverse)
 
 ```{r}
 # function to scrap info from website used
-scrapped_data <- function(data, css_string, regex_string){
+scrapped_data <- function(data, css_string, regex_string = ".*"){
   data %>% 
     html_elements(css_string) %>% 
     html_text() %>% 
