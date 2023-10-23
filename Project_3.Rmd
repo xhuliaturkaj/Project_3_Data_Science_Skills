@@ -258,10 +258,46 @@ text_for_program_7 <- paste(scraped_skills[[7]], collapse = " ")
 text_for_program_8 <- paste(scraped_skills[[8]], collapse = " ")
 text_for_program_9 <- paste(scraped_skills[[9]], collapse = " ")
 text_for_program_10 <-paste(scraped_skills[[10]], collapse = " ")
+text_for_program_11 <- paste(scraped_skills[[11]], collapse = " ")
+text_for_program_12 <- paste(scraped_skills[[12]], collapse = " ")
+text_for_program_13 <- paste(scraped_skills[[13]], collapse = " ")
+text_for_program_14 <- paste(scraped_skills[[14]], collapse = " ")
+text_for_program_15 <- paste(scraped_skills[[15]], collapse = " ")
+text_for_program_16 <- paste(scraped_skills[[16]], collapse = " ")
+text_for_program_17 <- paste(scraped_skills[[17]], collapse = " ")
+text_for_program_18 <- paste(scraped_skills[[18]], collapse = " ")
+text_for_program_19 <- paste(scraped_skills[[19]], collapse = " ")
+text_for_program_20 <-paste(scraped_skills[[20]], collapse = " ")
+text_for_program_21 <- paste(scraped_skills[[21]], collapse = " ")
+text_for_program_22 <- paste(scraped_skills[[22]], collapse = " ")
+text_for_program_23 <- paste(scraped_skills[[23]], collapse = " ")
 
 
 #Create one object that stores the combined text
-combined_text <- paste(text_for_program_1, text_for_program_2, text_for_program_3,text_for_program_4,text_for_program_5, text_for_program_6, text_for_program_7, text_for_program_8, text_for_program_9, text_for_program_10, collapse = " ", show_col_types = FALSE)
+combined_text <- paste(text_for_program_1, 
+                       text_for_program_2, 
+                       text_for_program_3,
+                       text_for_program_4,
+                       text_for_program_5, 
+                       text_for_program_6, 
+                       text_for_program_7, 
+                       text_for_program_8, 
+                       text_for_program_9, 
+                       text_for_program_10,
+                       text_for_program_11, 
+                       text_for_program_12, 
+                       text_for_program_13,
+                       text_for_program_14,
+                       text_for_program_15, 
+                       text_for_program_16, 
+                       text_for_program_17, 
+                       text_for_program_18, 
+                       text_for_program_19, 
+                       text_for_program_20,
+                       text_for_program_21, 
+                       text_for_program_22, 
+                       text_for_program_23,
+                       collapse = " ")
 
 #print(combined_text)
 ```
