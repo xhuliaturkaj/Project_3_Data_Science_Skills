@@ -212,4 +212,23 @@ combined_text <- paste(text_for_program_1, text_for_program_2, text_for_program_
 
 
 print(combined_text)
+```
+
+# Graph to show frequency of desired data science skills from the various programs
+
+```{r}
+element_count <- str_extract_all(combined_text, searchTerms) %>% 
+  lapply(function(x) length(x))
+
+searchTerms_table <- as_tibble(do.call(rbind, lapply(searchTerms, function(x) c(Key_Skills = x))))
+element_count_table <- as_tibble(do.call(rbind, lapply(element_count, function(x) c(Count = x))))
+
+frequency_table <- tibble(searchTerms_table, element_count_table)
+
+frequency_table %>%
+  ggplot(aes(x = Key_Skills, y = Count)) +
+  geom_bar(stat = "identity") +
+  coord_flip()
+```
+
 
