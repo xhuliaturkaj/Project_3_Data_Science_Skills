@@ -205,7 +205,11 @@ text_for_program_8 <- paste(scraped_skills[[8]], collapse = " ")
 text_for_program_9 <- paste(scraped_skills[[9]], collapse = " ")
 text_for_program_10 <-paste(scraped_skills[[10]], collapse = " ")
 
+#Create one object that stores the combined text
+
+combined_text <- paste(text_for_program_1, text_for_program_2, text_for_program_3,text_for_program_4,text_for_program_5, text_for_program_6, text_for_program_7, text_for_program_8, text_for_program_9, text_for_program_10, collapse = " ")
 
 
 
+print(combined_text)
 
