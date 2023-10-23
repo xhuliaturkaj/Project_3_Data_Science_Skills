@@ -271,7 +271,7 @@ scraped_skills_table <- as_tibble(do.call(rbind, lapply(scraped_skills, function
 # Graph to show the frequency of desired data science skills from the various programs
 ```{r}
 #element_count <- str_extract_all(combined_text, searchTerms) %>% 
-  lapply(function(x) length(x))
+  #lapply(function(x) length(x))
 #element_count_table <- as_tibble(do.call(rbind, lapply(element_count, function(x) c(Count = x))))
 
 element_detect <- lapply(searchTerms, function(x){
