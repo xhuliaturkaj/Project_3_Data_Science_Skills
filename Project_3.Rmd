@@ -18,10 +18,12 @@ knitr::opts_chunk$set(echo = TRUE)
 We believe that examining the curricula of top online Master of Data Science programs at 23 universities is an ideal approach. These programs are meticulously designed to equip students with the skills and knowledge needed to excel in the field. By scrutinizing what these respected institutions prioritize, we gain a deep understanding of the skills that form the backbone of data science success.
 
 
-We employed web scraping techniques to automate the extraction of data, capturing general information about the top 23 online Master's in Data Science programs. This data forms the foundation of the first table in our relational database.
+We employed web scraping techniques to automate the extraction of data, capturing general information about the top 23 online Masters in Data Science programs. This data forms the foundation of the first table in our relational database.
 
 From FORTUNE EDUCATION's website, we extracted the university's name, location, credit cost, and GRE requirements. While examining the URLs associated with the rankings, we discovered that some led to different programs within the same university. To address this, we manually retrieved the URLs for each program's overview website and then integrated them with the remaining information gathered through web scraping. 
 
+
+#-------------------------------------------------------------------------------
 # libraries
 ```{r}
 library(data.table)
@@ -35,11 +37,11 @@ library(stringr)
 library(RCurl)
 ```
 
-
-# functions used
+#-------------------------------------------------------------------------------
+# Functions used
 
 ```{r}
-# function to scrap info from website used
+# function to scrap info from the website used
 scrapped_data <- function(data, css_string, regex_string = ".*"){
   data %>% 
     html_elements(css_string) %>% 
@@ -48,7 +50,8 @@ scrapped_data <- function(data, css_string, regex_string = ".*"){
 }
 ```
 
-# Scrapping information of schools
+#-------------------------------------------------------------------------------
+# Scraping information on schools
 ```{r}
 url <- "https://fortune.com/education/information-technology/best-online-masters-in-data-science/"
 html <- read_html(url)
@@ -81,23 +84,13 @@ school_info <- tibble(
   avg_work_experience_required,
   )
 
-
-
 school_info
 ```
+#-------------------------------------------------------------------------------
 
 
-
-
-
-
-
-
-
-#Scraping data on skills you gain by the program's no. 7-10 by creating a function that scrapes the text data from each url and given css selector 
-
-
-# Here I created  a list called  program data where each element is a list containing URL and selector
+# Scraping data on skills you gain by the programs by creating a function that scrapes the text data from each URL and given CSS selector 
+# Here we created  a list called program data where each element is a list containing a URL and selector
 ```{r}
 program_data <- list(
   list(
@@ -164,20 +157,7 @@ searchTerms <- getURL("https://raw.githubusercontent.com/xhuliaturkaj/Project_3_
 #-------------------------------------------------------------------------------
 
 
-
-
-
-
 # Define a function to scrape skills from a program data entry
-
-
-
-
-
-  
-  
-  
-  
 scrape_skills <- function(program_data_entry) {
   webpage <- read_html(program_data_entry$url)
   skills <- webpage %>%
@@ -190,10 +170,8 @@ scrape_skills <- function(program_data_entry) {
 scraped_skills <- lapply(program_data, scrape_skills)
 print(scraped_skills)
 
-
-
-
-
+#-------------------------------------------------------------------------------
+# The raw text for the programs
 text_for_program_1 <- paste(scraped_skills[[1]], collapse = " ")
 text_for_program_2 <- paste(scraped_skills[[2]], collapse = " ")
 text_for_program_3 <- paste(scraped_skills[[3]], collapse = " ")
@@ -205,17 +183,16 @@ text_for_program_8 <- paste(scraped_skills[[8]], collapse = " ")
 text_for_program_9 <- paste(scraped_skills[[9]], collapse = " ")
 text_for_program_10 <-paste(scraped_skills[[10]], collapse = " ")
 
+
 #Create one object that stores the combined text
-
 combined_text <- paste(text_for_program_1, text_for_program_2, text_for_program_3,text_for_program_4,text_for_program_5, text_for_program_6, text_for_program_7, text_for_program_8, text_for_program_9, text_for_program_10, collapse = " ")
-
-
 
 print(combined_text)
 ```
 
-# Graph to show the frequency of desired data science skills from the various programs
 
+#-------------------------------------------------------------------------------
+# Graph to show the frequency of desired data science skills from the various programs
 ```{r}
 element_count <- str_extract_all(combined_text, searchTerms) %>% 
   lapply(function(x) length(x))
@@ -232,8 +209,10 @@ cleaned_frequency_table <- frequency_table %>%
 cleaned_frequency_table %>%
   ggplot(aes(x = Key_Skills, y = Count)) +
   geom_bar(stat = "identity") +
-  coord_flip() 
-  #geom_text(aes(label = after_stat("identity")), stat = "count", hjust = 2, colour = "black")
+  coord_flip() +
+  xlab('Skill') + ylab('Frequency') + labs(title = "Frequency of Data Science Skills") + theme(legend.position = "none") +
+  geom_text(aes(label = Count), hjust = -0.25, color = "black")
+
 ```
 
 
