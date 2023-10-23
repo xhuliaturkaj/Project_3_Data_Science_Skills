@@ -107,7 +107,7 @@ program_data <- list(
     name = "Program 3",
     url = "https://www.baypath.edu/academics/graduate-programs/applied-data-science-ms/",
     selector = "li:nth-child(2)"
-),
+  ),
   list(
     name = "Program 4",
     url = "https://catalog.njit.edu/graduate/computing-sciences/computer-science/ms/index.html",
@@ -116,7 +116,7 @@ program_data <- list(
   list(
     name = "Program 5",
     url = "https://www.clemson.edu/graduate/academics/ms-dsa/academics.html",
-    selector = "td:nth-child(4) , td:nth-child(3), tr:nth-child(2) td:nth-child(2)"
+    selector = c("td:nth-child(4) , td:nth-child(3), tr:nth-child(2) td:nth-child(2)")
   ),
   list(
     name = "Program 6",
@@ -142,6 +142,71 @@ program_data <- list(
     name = "Program 10",
     url = "https://www.msol.ucla.edu/data-science-engineering/",
     selector = c(".order-lg-1", ".mb-0")
+  ),
+  list(
+    name = "Program 11",
+    url = "https://www.cdm.depaul.edu/academics/Pages/MS-in-Data-Science.aspx",
+    selector = c(".tabbody p , .splashIntro")
+  ),
+  list(
+    name = "Program 12",
+    url = "https://engineeringonline.ucr.edu/data-science/data-science-curriculum/",
+    selector = c("#content__wrap--1 .col-sm-12 , .col-sm-6 div")
+  ),
+  list(
+    name = "Program 13",
+    url = "https://onlinestemprograms.wpi.edu/programs/online-master-science-data-science-v3",
+    selector = c("#block-pageblock-pb12694 p , #block-pageblock-pb12993 p, li, #block-pageblock-pb12989 p, #block-pageblock-pb12726 p, #block-pageblock-pb12710 p, #block-pageblock-pb12695 p, #block-pageblock-pb12709 p, #block-pageblock-pb12695 ul, #block-pageblock-pb12705 p, #block-views-fast-fact-block p")
+  ),
+  list(
+    name = "Program 14",
+    url = "https://lewisu.smartcatalogiq.com/en/graduate-2023-2024/graduate-catalog/new-college-of-aviation-science-and-technology/department-of-engineering-computing-and-mathematical-sciences/certificate-in-data-science/",
+    selector = ".programTables"
+  ),
+  list(
+    name = "Program 15",
+    url = "https://cs.illinois.edu/academics/graduate/professional-mcs/online-master-computer-science-data-science",
+    selector = c("#tile5326 , #tile5324, #tile5323")
+  ),
+  list(
+    name = "Program 16",
+    url = "https://sps.cuny.edu/academics/graduate/master-science-data-science-ms",
+    selector = c(".row , .degree-detail")
+  ),
+  list(
+    name = "Program 17",
+    url = "https://umdearborn.edu/cecs/departments/computer-and-information-science/graduate-programs/ms-data-science",
+    selector = c(".accordion-content , .article div :nth-child(3), .text")
+  ),
+  list(
+    name = "Program 18",
+    url = "https://www.regis.edu/_documents/academics/fact-sheets/graduate/ms-data-science.pdf",
+    selector = c("#5-threecolumntextcallout , .columns--align-left, #1-contentwithsidebar")
+  ),
+  list(
+    name = "Program 19",
+    url = "",
+    selector = c("")
+  ),
+  list(
+    name = "Program 20",
+    url = "",
+    selector = c("")
+  ),
+  list(
+    name = "Program 21",
+    url = "",
+    selector = c("")
+  ),
+  list(
+    name = "Program 22",
+    url = "",
+    selector = c("")
+  ),
+  list(
+    name = "Program 23",
+    url = "",
+    selector = c("")
   )
 )
 
