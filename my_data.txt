@@ -1,0 +1,172 @@
+"x"
+"1""Students completing this degree will have learned the skills required to work as a data scientist, including a basic understanding of data science techniques, the ability to write data science programs in Python, knowledge and experience in working with both databases and big data infrastructure, skills in applying machine learning and data mining techniques, and knowledge of how to apply these skills to real-world problems. The Certificate in Applied Data Science introduces the tools, methods, and conceptual approaches used to support modern data analysis and decision making in professional and applied research settings. Students become familiar with the challenges of working with data — asking a good question, inference and causality, decision making — as well as how to best utilize the new tools and techniques for data analytics, including machine learning and data mining. Graduating at the end of fall 2021? Graduating at the end of spring or summer 2022? Hands-on application using essential programming languages such as Python, SAS, R, and SQL Undergraduate
+														Adult & Online Undergraduate
+														Adult & Online 3 Data Structures and Algorithms 9 Operating System Design Data Management System Design Internet and Higher-Layer Protocols Machine Learning 12 18  Foundations of Computer Science       18  Data Structures and Algorithms Introduction to Computational Complexity Algorithms on Graphs Design Techniques for Algorithms Parallel Algorithms Computational Optimization Sequencing and Scheduling  Artificial Intelligence Machine Learning Reinforcement Learning Deep Learning Advanced Machine Learning Pattern Recognition and Applications  Cryptography and Security Security and Privacy in Computer Systems Network Protocols Security Counter Hacking Techniques Cyber Sec Investigations & Law Topics in Smartphone Sec & Rel Network Management and Security Advanced Data Security and Privacy Security and Privacy in Wireless Networks  Data Management System Design Advanced Database System Design Data Mining Introduction to Big Data Applications of Database Systems Data Mining and Management in Bioinformatics  Java Programming Computer Programming Languages Data Analytics with R Program Cloud Computing High Performance Computing Mobile Computing and Sensor Networks  Operating System Design Distributed Systems Computer Architecture Cognitive Cloud Networking - Architectures and Applications Internet and Higher-Layer Protocols Linux Kernel Programming  Software Design and Production Methodology Software Project Management Software Testing and Quality Assurance Software Architecture Software Studio Seminar in Software Engineering Seminar in Software Management and Production  Principles of Interactive Computer Graphics Image Processing and Analysis Systems Simulation Cognitive Computing Computer Vision Special Emerging Topics: Advanced Image Processing and Analysis Analytics Bootcamp ( DSA 8280) Statistical Methods I ( DSA 8010) Programming in Data Science ( DSA 8640) Statistical Methods II ( DSA 8020) Data Management & Warehousing ( DSA 8660) Statistical Computing ( DSA 8030)  Multivariate Analysis ( DSA 8070) Advanced Mathematical Programming ( DSA 8420) Business Analytics Application ( DSA 8670) Advanced Data Analytics ( DSA 8590)  Analytics Bootcamp ( DSA 8280) Statistical Methods I ( DSA 8010) Statistical Methods II ( DSA 8020) Programming in Data Science ( DSA 8640) Data Management & Warehousing ( DSA 8660) Multivariate Analysis ( DSA 8070) Mathematical Programming ( DSA 8420) Advanced Data Analytics ( DSA 8590) Statistical Computing ( DSA 8030) Business Analytics Application ( DSA 8670)  Analytics Bootcamp ( DSA 8280) Statistical Methods I ( DSA 8010)  Statistical Computing ( DSA 8030) Programming in Data Science ( DSA 8640) Statistical Methods II ( DSA 8020)  Advanced Mathematical Programming ( DSA 8420)  Data Management & Warehousing ( DSA 8660) Multivariate Analysis ( DSA 8070)  Business Analytics Application ( DSA 8670) Advanced Data Analytics ( DSA 8590)  (15) Mathematical Statistics Applied Statistics Machine Learning Statistical Learning Public Engagement for Scientists Data Preparation and Analysis 3 Advanced Database Organization Data-Intensive Computing Big Data Technologies (6) 6 (12) 12 33 (6) Data Science Practicum (6) Reading and Special Problems Professional Master's Project (6) 6  Database Organization Introduction to Algorithms Operating Systems Data Integration, Warehousing, and Provenance Advanced Database Organization Data Privacy and Security Design and Analysis of Algorithms Combinatorial Optimization Parallel and Distributed Processing Cloud Computing Data-Intensive Computing Software Testing and Analysis Big Data Technologies  Data Mining Computer Vision Geospatial Vision and Visualization Advanced Data Mining Information Retrieval Cyber-Physical Systems:  Languages and Systems Cyber-Physical Systems Security and Design Deep Learning Interactive and Transparent Machine Learning Online Social Network Analysis Advanced Artificial Intelligence Probabilistic Graphical Models Machine Learning Natural Language Processing  Graph Theory and Applications Introduction to Stochastic Processes Design and Analysis of Experiments Mathematical Modeling I Mathematical Modeling II Mathematical Modeling Linear Algebra Optimization I Probability Stochastic Processes Introduction to Time Series Mathematical Statistics Applied Statistics Monte Carlo Methods in Finance Multivariate Analysis Advanced Design of Experiments Statistical Learning Machine Learning in Finance:  From Theory to Practice Bayesian Computational Statistics Mathematical Methods for Algorithmic Trading  Bioinformatics Partial Differential Equations Stochastic Dynamics Computational Mathematics I Computational Mathematics II Meshfree Methods Computational Physics  Project Management Public Engagement for Scientists Fundamentals of Design User Experience Research and Evaluation Neurobiology Bioinformatics Biomedical Engineering Applications of Statistics Neurobiology Computational Neuroscience II:  Vision Cognitive Neuroscience Neuroimaging Quantitative Neural Function Strategic Management Business Statistics Applications of Unmanned Aerial Vehicles (UAVs or \"Drones\") for Construction Projects Statistical Quality and Process Control Introduction to Linguistics Social Networks Humanizing Technology Artificial Intelligence in Smart Grid Nutrition, Metabolism, and Health Food Product Development Food Plant Operations Performance Management in Food Operations Digital Marketing Predictive Analytics Social Media Marketing Analytics Quantitative Marketing Models Introduction to Robotics Data Driven Modeling Robotics Statistical Analysis in Financial Markets Financial Modeling Science and Values Ethics in Computer Science Learning Theory Cognitive Science Learning and Cognition Complex Organizations 3 3 3 9 3 3 3 9 The online MS in Business Analytics and Data Science (MS BAnDS) is a STEM-designated
+                     program that trains those who are currently in the workforce to transition as analytics
+                     and data science professionals and tackle real-world challenges. In 2022, our online
+                     program was ranked 10th by Fortune’s Best Master’s Programs in Business Analytics and as 7th by Fortune’s Best Master’s Programs in Data Science. We use state-of-the-art enterprise level
+                     analytics software The program is fully multi-platform and students get hands-on training
+                     with software and tools such as Alteryx, Azure, Data Bricks, GCP, Power BI, Python,
+                     R, SAS, SQL, Snowflake, Tableau and Tensor Flow which provide great advantages in
+                     the competitive job market. Cutting-Edge Curriculum
+               We prioritize the real-world application of knowledge and skills to best support students
+                  who want to accelerate their careers in data science, business analytics, business
+                  intelligence and big data fields. Through our comprehensive curriculum, you will learn
+                  how to use advanced technologies and statistical methods to manipulate data and translate
+                  findings into actionable organizational strategies.
+               Classes include foundational building blocks for today's data scientists:
+               
+                  
+                     Statistics for Data Science
+                     Scripting Languages
+                     Database Concepts
+                     Data Technology Environments
+                     Big Data Strategy
+                     Business Intelligence
+                  
+                  
+                     Multivariate Analysis
+                     Time Series Analysis
+                     Simulation & Optimization
+                     Machine Learning
+                     Decision Theory and Business Analytics
+                     Big Data Security Master’s in Data Science and Analytics
+
+
+
+The Master’s of Data Science and Analytics equips Data Scientists with the tools and skills to take on tomorrow’s challenges. The program is designed for professionals that want to use data to enhance decision making and outcomes.
+
+
+
+
+
+
+
+Core courses include:
+
+
+
+
+
+DATA SCI 7010: Introduction to Data Analytics
+
+
+
+DATA SCI 7020: Statistical and Mathematical Foundations for Data Analytics
+
+
+
+DATA SCI 8010 Data Analytics from Applied Machine Learning
+
+
+
+DATA SCI 8020: Big Data Security 
+
+
+
+
+
+DATA SCI 7040: Big Data Visualization
+
+
+
+DATA SCI 8000: Data and Information Ethics
+
+
+
+DATA SCI 8080: Big Data Analysis Case Study
+
+
+
+DATA SCI 8090: Big Data Capstone 
+
+
+
+
+
+On-Campus MS students will complete the 16-week Fall group 8080 Case Study and 16-week group 8090 Capstone OR a Fall and Spring DATA SCI 8095 Thesis Research course for a total of 6 credits. Online MS students will complete the 8-week Summer group 8080 Case Study and 16-week Spring group 8090 Capstone.
+
+
+
+Emphasis Courses and Capstone
+
+
+
+Emphasis courses represent the final stage in the further refinement of learning with domain-specific data and challenges. Interdisciplinary faculty from other MU colleges and schools help lead domain-specific learning through emphasis area courses.
+
+
+
+The capstone project teams up students with faculty & members of industry for hands-on experience with large data sets and the latest technology and techniques.
+
+
+
+The thesis research class is for on-campus students only and gives an opportunity to work on an independent research topic under a faculty advisor approved by the department. Program Requirements
+
+
+
+ Students will work closely with faculty mentors, gain experience through solving real-word Big Data issues, explore concepts targeted to their emphasis area, and more. 
+
+
+
+Required Credits (34 Hours)
+
+
+
+19 Credit Hours of Data Science Core Curriculum
+
+
+
+9 Credit Hours of Emphasis Area courses
+
+
+
+3 Credit Hour Case Study
+
+
+
+3 Credit Hour Capstone (OR Thesis Research for on-campus students for 6 credits instead of Case Study & Capstone) More Information
+
+
+
+
+
+
+
+
+
+
+Admission Requirements
+
+
+Curriculum Information
+
+
+
+
+Emphasis Areas
+
+
+Frequently Asked Questions Ready to get started?
+
+
+
+Take on Big Data today!
+
+
+
+
+
+
+
+
+
+
+Apply Now
+
+
+
+
+Contact Us In every industry, there is a significant need for professionals who understand how to achieve efficiency and discover ways to optimize productivity and improve user experience for consumers. Because of this, the demand for data science master’s graduates continues to grow.
+                    The UCLA Samueli School of Engineering offers an online Master of Science in Engineering with Certificate of Specialization in Data Science Engineering (MSOL: DATA SCIENCE ENGR) that prepares students to solve problems and harness data ethically using responsible artificial intelligence through a curriculum of five core courses and four electives. Students have the opportunity to craft their own plan of study to fit their interests while also gaining the knowledge to use large-scale data to drive actionable insights based on science. Join a Diverse, Global Network
+                    MSOL: DATA SCIENCE ENGR students have the opportunity to build an inclusive network. Upon graduating from the master’s program, our students join a loyal alumni network that includes 42,000 engineering graduates and nearly 400,000 Bruins overall.
+                    Online students can also join affinity organizations such as the National Society of Black Engineers, Queer and Trans in STEM, the Society of Latinx Engineers and Scientists and the Society of Women Engineers."
