@@ -195,28 +195,28 @@ program_data <- list(
   ),
   list(
     name = "Program 19",
-    url = "",
-    selector = c("")
+    url = "https://csweb.rice.edu/academics/graduate-programs/online-mcs/curriculum#corerequiredcourses",
+    selector = c(".mb-2-3 , .discover_small, .styled, .discover, .item-mcs p, .tac:nth-child(2) .grid-mw--1200")
   ),
   list(
     name = "Program 20",
-    url = "",
-    selector = c("")
+    url = "https://www.eastern.edu/academics/graduate-programs/ms-data-science",
+    selector = c(".txt , #content :nth-child(3), .field_p_intro_text span")
   ),
   list(
     name = "Program 21",
-    url = "",
-    selector = c("")
+    url = "https://onlinegrad.syracuse.edu/information-science/academics/#applied-data-science",
+    selector = c("#section-6012c09d-d581-42b5-ac54-caa876af686c .section--mobileText , #section-6012c09d-d581-42b5-ac54-caa876af686c :nth-child(7)")
   ),
   list(
     name = "Program 22",
-    url = "",
-    selector = c("")
+    url = "https://stevens.smartcatalogiq.com/en/2023-2024/academic-catalog/department-of-mathematical-sciences/graduate-programs/master-of-science-in-data-science/",
+    selector = "#rightpanel"
   ),
   list(
     name = "Program 23",
-    url = "",
-    selector = c("")
+    url = "https://online.pace.edu/graduate-programs/ms-in-data-science/curriculum/",
+    selector = c(".mr-lg-5 p:nth-child(2) , p:nth-child(1), .collapsed")
   )
 )
 
