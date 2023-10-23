@@ -166,7 +166,22 @@ scrape_skills <- function(program_data_entry) {
 # Scrape skills for each program in program_data
 scraped_skills <- lapply(program_data, scrape_skills)
 print(scraped_skills)
-```
+
+
+
+
+
+text_for_program_1 <- paste(scraped_skills[[1]], collapse = " ")
+text_for_program_2 <- paste(scraped_skills[[2]], collapse = " ")
+text_for_program_3 <- paste(scraped_skills[[3]], collapse = " ")
+text_for_program_4 <- paste(scraped_skills[[4]], collapse = " ")
+text_for_program_5 <- paste(scraped_skills[[5]], collapse = " ")
+text_for_program_6 <- paste(scraped_skills[[6]], collapse = " ")
+text_for_program_7 <- paste(scraped_skills[[7]], collapse = " ")
+text_for_program_8 <- paste(scraped_skills[[8]], collapse = " ")
+text_for_program_9 <- paste(scraped_skills[[9]], collapse = " ")
+text_for_program_10 <-paste(scraped_skills[[10]], collapse = " ")
+
 
 
 
