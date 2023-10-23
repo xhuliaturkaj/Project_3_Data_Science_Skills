@@ -161,7 +161,7 @@ searchTerms <- getURL("https://raw.githubusercontent.com/xhuliaturkaj/Project_3_
   mutate(X1 = str_replace_all(X1, "\\n", "")) %>%
   # convert to vector
   pull(1)
-searchTerms
+#-------------------------------------------------------------------------------
 
 
 
