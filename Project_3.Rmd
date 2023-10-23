@@ -22,12 +22,19 @@ We employed web scraping techniques to automate the extraction of data, capturin
 
 From FORTUNE EDUCATION's website, we extracted the university's name, location, credit cost, and GRE requirements. While examining the URLs associated with the rankings, we discovered that some led to different programs within the same university. To address this, we manually retrieved the URLs for each program's overview website and then integrated them with the remaining information gathered through web scraping. 
 
-# library used
-
+# libraries
 ```{r}
-library(rvest)
+library(data.table)
 library(tidyverse)
+library(rvest) #HTML
+library(jsonlite) #JSON 
+library(xml2) #XML
+library(tm)
+library(knitr)
+library(stringr)
+library(RCurl)
 ```
+
 
 # functions used
 
