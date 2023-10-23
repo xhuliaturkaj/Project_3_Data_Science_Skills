@@ -48,6 +48,16 @@ scrapped_data <- function(data, css_string, regex_string = ".*"){
     html_text() %>% 
     str_extract(regex_string)
 }
+
+# Define a function to scrape skills from a program data entry
+scrape_skills <- function(program_data_entry) {
+  webpage <- read_html(program_data_entry$url)
+  skills <- webpage %>%
+    html_nodes(program_data_entry$selector) %>%
+    html_text(trim = TRUE) %>% 
+    paste(collapse = " ")
+  return(skills)
+}
 ```
 
 #-------------------------------------------------------------------------------
@@ -223,47 +233,55 @@ searchTerms <- getURL("https://raw.githubusercontent.com/xhuliaturkaj/Project_3_
 
 
 # Define a function to scrape skills from a program data entry
-scrape_skills <- function(program_data_entry) {
-  webpage <- read_html(program_data_entry$url)
-  skills <- webpage %>%
-    html_nodes(program_data_entry$selector) %>%
-    html_text(trim = TRUE)
-  return(skills)
-}
+#scrape_skills <- function(program_data_entry) {
+  #webpage <- read_html(program_data_entry$url)
+  #skills <- webpage %>%
+    #html_nodes(program_data_entry$selector) %>%
+   # html_text(trim = TRUE)
+  #return(skills)
+#}
 
 # Scrape skills for each program in program_data
 scraped_skills <- lapply(program_data, scrape_skills)
-print(scraped_skills)
+scraped_skills_table <- as_tibble(do.call(rbind, lapply(scraped_skills, function(x) c(Description = x))))
+#print(scraped_skills)
 
 #-------------------------------------------------------------------------------
 # The raw text for the programs
-text_for_program_1 <- paste(scraped_skills[[1]], collapse = " ")
-text_for_program_2 <- paste(scraped_skills[[2]], collapse = " ")
-text_for_program_3 <- paste(scraped_skills[[3]], collapse = " ")
-text_for_program_4 <- paste(scraped_skills[[4]], collapse = " ")
-text_for_program_5 <- paste(scraped_skills[[5]], collapse = " ")
-text_for_program_6 <- paste(scraped_skills[[6]], collapse = " ")
-text_for_program_7 <- paste(scraped_skills[[7]], collapse = " ")
-text_for_program_8 <- paste(scraped_skills[[8]], collapse = " ")
-text_for_program_9 <- paste(scraped_skills[[9]], collapse = " ")
-text_for_program_10 <-paste(scraped_skills[[10]], collapse = " ")
+#text_for_program_1 <- paste(scraped_skills[[1]], collapse = " ")
+#text_for_program_2 <- paste(scraped_skills[[2]], collapse = " ")
+#text_for_program_3 <- paste(scraped_skills[[3]], collapse = " ")
+#text_for_program_4 <- paste(scraped_skills[[4]], collapse = " ")
+#text_for_program_5 <- paste(scraped_skills[[5]], collapse = " ")
+#text_for_program_6 <- paste(scraped_skills[[6]], collapse = " ")
+#text_for_program_7 <- paste(scraped_skills[[7]], collapse = " ")
+#text_for_program_8 <- paste(scraped_skills[[8]], collapse = " ")
+#text_for_program_9 <- paste(scraped_skills[[9]], collapse = " ")
+#text_for_program_10 <-paste(scraped_skills[[10]], collapse = " ")
 
 
 #Create one object that stores the combined text
-combined_text <- paste(text_for_program_1, text_for_program_2, text_for_program_3,text_for_program_4,text_for_program_5, text_for_program_6, text_for_program_7, text_for_program_8, text_for_program_9, text_for_program_10, collapse = " ")
+#combined_text <- paste(text_for_program_1, text_for_program_2, text_for_program_3,text_for_program_4,text_for_program_5, text_for_program_6, text_for_program_7, text_for_program_8, text_for_program_9, #text_for_program_10, collapse = " ")
 
-print(combined_text)
+#print(combined_text)
 ```
 
 
 #-------------------------------------------------------------------------------
 # Graph to show the frequency of desired data science skills from the various programs
 ```{r}
-element_count <- str_extract_all(combined_text, searchTerms) %>% 
+#element_count <- str_extract_all(combined_text, searchTerms) %>% 
   lapply(function(x) length(x))
+#element_count_table <- as_tibble(do.call(rbind, lapply(element_count, function(x) c(Count = x))))
+
+element_detect <- lapply(searchTerms, function(x){
+  lapply(scraped_skills_table, function(y) str_extract_all(y, x))
+})
+element_count <- lapply(searchTerms_detect, function(x) length(x[[1]]))
+element_count_table <- as_tibble(do.call(rbind, lapply(searchTerms_count, function(x) c(Count = x))))
 
 searchTerms_table <- as_tibble(do.call(rbind, lapply(searchTerms, function(x) c(Key_Skills = x))))
-element_count_table <- as_tibble(do.call(rbind, lapply(element_count, function(x) c(Count = x))))
+
 
 frequency_table <- tibble(searchTerms_table, element_count_table)
 
