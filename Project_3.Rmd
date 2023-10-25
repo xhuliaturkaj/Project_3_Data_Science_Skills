@@ -2,7 +2,9 @@
 title: 'Project 3: Best Skills for a Data Scientist'
 author: "Folorunsho Atanda, Xhulia Turkaj, Ron Balaban"
 date: "2023-10-22"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -36,6 +38,7 @@ library(knitr)
 library(stringr)
 library(RCurl)
 library(wordcloud)
+library(RMySQL)
 ```
 
 #-------------------------------------------------------------------------------
@@ -95,11 +98,12 @@ school_info <- tibble(
   )
 
 school_info
+
 ```
 #-------------------------------------------------------------------------------
 
-
 # Scraping data on skills you gain by the programs by creating a function that scrapes the text data from each URL and given CSS selector 
+
 # Here we created  a list called program data where each element is a list containing a URL and selector
 ```{r}
 program_data <- list(
@@ -220,31 +224,8 @@ program_data <- list(
   )
 )
 
-#-------------------------------------------------------------------------------
-# List of our keywords
-# searchTerms <- getURL("https://raw.githubusercontent.com/xhuliaturkaj/Project_3_Data_Science_Skills/main/Keywords.csv") %>%
-#   read_csv(col_names = FALSE, trim_ws = FALSE) %>%
-#   # remove newline
-#   mutate(X1 = str_replace_all(X1, "\\n", "")) %>%
-#   # convert to vector
-#   pull(1)
-
-# Scraping our skill set
-
-skill_set_url <- "https://www.datacamp.com/blog/top-15-data-scientist-skills"
-skill_set_html <- read_html(skill_set_url)
-skill_set <- skill_set_html %>% 
-  scrapped_data(".css-1j302im-RichText h3", ".*")
-skill_set <- gsub("Skills", "", skill_set) 
-skill_set <- gsub("Statistics and Math", "Statistics", skill_set)
-skill_set <- c(skill_set, "Math")
-
-#-------------------------------------------------------------------------------
-
 # Scrape skills for each program in program_data
 scraped_skills <- lapply(program_data, scrape_skills)
-
-#-------------------------------------------------------------------------------
 
 # The raw text for the programs
 text_for_program_1 <- paste(scraped_skills[[1]], collapse = " ")
@@ -297,10 +278,28 @@ combined_text <- paste(text_for_program_1,
                        text_for_program_22, 
                        text_for_program_23,
                        collapse = " ")
+
+```
+#-------------------------------------------------------------------------------
+
+# Using DataCamp's recommended data scientist skills we came up with a list of what we believe to be the most important skills needed by a data scientist
+
+```{r}
+skill_set_url <- "https://www.datacamp.com/blog/top-15-data-scientist-skills"
+skill_set_html <- read_html(skill_set_url)
+skill_set <- skill_set_html %>% 
+  scrapped_data(".css-1j302im-RichText h3", ".*")
+skill_set <- gsub("Skills", "", skill_set) 
+skill_set <- gsub("Statistics and Math", "Statistics", skill_set)
+skill_set <- c(skill_set, "Math")
+
+skill_set
 ```
 
-
 #-------------------------------------------------------------------------------
+
+# We compare the recommended data scientist skills with the skills taught by the 23 programs we picked
+
 # Graph to show the frequency of desired data science skills from the various programs
 ```{r}
 element_count <- str_extract_all(combined_text, skill_set) %>%
@@ -309,14 +308,11 @@ element_count_table <- as_tibble(do.call(rbind, lapply(element_count, function(x
 
 skill_set_table <- as_tibble(do.call(rbind, lapply(skill_set, function(x) c(Key_Skills = x))))
 
-
 frequency_table <- tibble(skill_set_table, element_count_table)
-```
 
-```{r}
 # Remove those with no appearances
 cleaned_frequency_table2 <- frequency_table #%>% 
-  #filter(Count >= 9) 
+  #filter(Count > 0) 
 
 cleaned_frequency_table2 %>%
   ggplot(aes(x = reorder(Key_Skills, +Count), y = Count)) +
@@ -331,3 +327,8 @@ wordcloud(cleaned_frequency_table2$Key_Skills[1:16],
           as.numeric(cleaned_frequency_table2$Count[1:16]),
           colors = brewer.pal(8, "Dark2"))
 ```
+
+# Conclusion:
+The graphical representation reveals that universities predominantly emphasize programming skills, with the exception of SQL (for reasons that are not immediately clear). It's important to note that the data we extracted was from the information pages of the 23 selected master's programs. Further investigation might uncover that these schools do indeed offer a comprehensive range of technical skills, including SQL.
+
+A noteworthy observation is that the information pages primarily highlight technical skills. In our view, it is advisable for schools to also place emphasis on soft skills and explicitly mention their commitment to developing these skills on their information pages.
