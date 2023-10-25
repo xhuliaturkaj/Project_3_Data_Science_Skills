@@ -221,12 +221,20 @@ program_data <- list(
 
 #-------------------------------------------------------------------------------
 # List of our keywords
-searchTerms <- getURL("https://raw.githubusercontent.com/xhuliaturkaj/Project_3_Data_Science_Skills/main/Keywords.csv") %>%
-  read_csv(col_names = FALSE, trim_ws = FALSE) %>%
-  # remove newline
-  mutate(X1 = str_replace_all(X1, "\\n", "")) %>%
-  # convert to vector
-  pull(1)
+# searchTerms <- getURL("https://raw.githubusercontent.com/xhuliaturkaj/Project_3_Data_Science_Skills/main/Keywords.csv") %>%
+#   read_csv(col_names = FALSE, trim_ws = FALSE) %>%
+#   # remove newline
+#   mutate(X1 = str_replace_all(X1, "\\n", "")) %>%
+#   # convert to vector
+#   pull(1)
+
+# Scraping our skill set
+
+skill_set_url <- "https://www.datacamp.com/blog/top-15-data-scientist-skills"
+skill_set_html <- read_html(skill_set_url)
+skill_set <- skill_set_html %>% 
+  scrapped_data(".css-1j302im-RichText h3", ".*")
+skill_set <- gsub("Skills", "", skill_set)
 
 #-------------------------------------------------------------------------------
 
@@ -292,20 +300,20 @@ combined_text <- paste(text_for_program_1,
 #-------------------------------------------------------------------------------
 # Graph to show the frequency of desired data science skills from the various programs
 ```{r}
-element_count <- str_extract_all(combined_text, searchTerms) %>%
+element_count <- str_extract_all(combined_text, skill_set) %>%
 lapply(function(x) length(x))
 element_count_table <- as_tibble(do.call(rbind, lapply(element_count, function(x) c(Count = x))))
 
-searchTerms_table <- as_tibble(do.call(rbind, lapply(searchTerms, function(x) c(Key_Skills = x))))
+skill_set_table <- as_tibble(do.call(rbind, lapply(skill_set, function(x) c(Key_Skills = x))))
 
 
-frequency_table <- tibble(searchTerms_table, element_count_table)
+frequency_table <- tibble(skill_set_table, element_count_table)
 ```
 
 ```{r}
 # Remove those with no appearances
-cleaned_frequency_table2 <- frequency_table %>% 
-  filter(Count >= 9) 
+cleaned_frequency_table2 <- frequency_table #%>% 
+  #filter(Count >= 9) 
 
 cleaned_frequency_table2 %>%
   ggplot(aes(x = reorder(Key_Skills, +Count), y = Count)) +
