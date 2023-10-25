@@ -234,7 +234,9 @@ skill_set_url <- "https://www.datacamp.com/blog/top-15-data-scientist-skills"
 skill_set_html <- read_html(skill_set_url)
 skill_set <- skill_set_html %>% 
   scrapped_data(".css-1j302im-RichText h3", ".*")
-skill_set <- gsub("Skills", "", skill_set)
+skill_set <- gsub("Skills", "", skill_set) 
+skill_set <- gsub("Statistics and Math", "Statistics", skill_set)
+skill_set <- c(skill_set, "Math")
 
 #-------------------------------------------------------------------------------
 
