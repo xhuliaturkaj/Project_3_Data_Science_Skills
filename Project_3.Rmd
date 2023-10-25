@@ -35,6 +35,7 @@ library(tm)
 library(knitr)
 library(stringr)
 library(RCurl)
+library(wordcloud)
 ```
 
 #-------------------------------------------------------------------------------
@@ -325,3 +326,8 @@ cleaned_frequency_table2 %>%
   geom_text(aes(label = Count), hjust = -0.25, color = "black")
 ```
 
+```{r}
+wordcloud(cleaned_frequency_table2$Key_Skills[1:16], 
+          as.numeric(cleaned_frequency_table2$Count[1:16]),
+          colors = brewer.pal(8, "Dark2"))
+```
